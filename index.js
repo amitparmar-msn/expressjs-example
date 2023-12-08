@@ -4,7 +4,7 @@ const app = express();
 const port = 8080;
 
 app.get("/user", async function (req, res) {
-    const uri = "mongodb+srv://dcsuser:dcsuser@test-db.lk92wsx.mongodb.net/?retryWrites=true&w=majority";
+    const uri = "mongodb+srv://<username>:<password>@test-db.lk92wsx.mongodb.net/?retryWrites=true&w=majority";
     const client = new MongoClient(uri);
     try {
         await client.connect();
@@ -19,7 +19,7 @@ app.get("/user", async function (req, res) {
     res.send("No data found!");
 });
 app.post("/user", async function (req, res) {
-    const uri = "mongodb+srv://dcsuser:dcsuser@test-db.lk92wsx.mongodb.net/?retryWrites=true&w=majority";
+    const uri = "mongodb+srv://<username>:<password>@test-db.lk92wsx.mongodb.net/?retryWrites=true&w=majority";
     const client = new MongoClient(uri);
     try {
         await client.connect();
@@ -39,7 +39,7 @@ app.post("/user", async function (req, res) {
     res.send("Action failed!");
 });
 app.delete("/user", async function (req, res) {
-    const uri = "mongodb+srv://dcsuser:dcsuser@test-db.lk92wsx.mongodb.net/?retryWrites=true&w=majority";
+    const uri = "mongodb+srv://<username>:<password>@test-db.lk92wsx.mongodb.net/?retryWrites=true&w=majority";
     const client = new MongoClient(uri);
     try {
         await client.connect();
@@ -53,7 +53,7 @@ app.delete("/user", async function (req, res) {
     res.send("Action failed!");
 });
 app.put("/user", async function (req, res) {
-    const uri = "mongodb+srv://dcsuser:dcsuser@test-db.lk92wsx.mongodb.net/?retryWrites=true&w=majority";
+    const uri = "mongodb+srv://<username>:<password>@test-db.lk92wsx.mongodb.net/?retryWrites=true&w=majority";
     const client = new MongoClient(uri);
     try {
         await client.connect();
